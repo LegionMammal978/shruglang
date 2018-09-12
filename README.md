@@ -8,7 +8,7 @@
 | '         | input |
 | "         | print |
 | ,(ip),    | fetch |
-| :/        | random default |
+| •-•        | random default |
 | \         | retreat one cell |
 | /         | advance one cell |
 | +         | add one |
