@@ -55,7 +55,7 @@ var idk = (function () {
 								return function () {
 										var loopCounter = 0;
 										while (data[ptr] > 0) {
-												if (loopCounter++ > 0xf) {throw "Infinite the universe is, but counted our lives are ";}
+												if (loopCounter++ > 0xFFFFFF) {throw "Infinite the universe is, but counted our lives are ";}
 												nodes.forEach(function (node) {
 														node();
 												});
