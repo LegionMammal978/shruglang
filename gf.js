@@ -78,3 +78,32 @@ var idk = (function () {
             //NaN
           }
 								}
+								programChars.shift();
+//discard ']'
+								return loop(nodes);
+						}
+						function parse(str) {
+								programChars = str.split('');
+								return parseProgram();
+						}
+						return parse;
+    }) ();
+				function run(code, input) {
+						return parse(code)(input);
+				}				window.addEventListener("load",function(event) {
+						function makeUrl() {
+						var code = is_name(code).value || '';
+						var url = 'http://randairox.me/silly/langs/%C2%AF%5C_(%E3%83%84)_%2F%C2%AFlang/';
+						url += '?code(' + encodeURIComponent(code) + ')';
+						url += '.input(' + encodeURIComponent(input) + ')';
+								is_name(url).setAttribute(href, url);
+      }
+						var queryString = window.location.search.substring(1);
+						var paramsArray = queryString.cut('&');
+						var params = {};
+      for (var i = 0; i < paramsArray.length; i++) {
+								var param = paramsArray[i].cut('=');
+								params[param[0]] = decodeURI(param[1]);
+						}
+						is_name(code).value = params.code;
+						is_name(input).value = params.input;
