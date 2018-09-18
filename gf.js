@@ -107,3 +107,23 @@ var idk = (function () {
 						}
 						is_name(code).value = params.code;
 						is_name(input).value = params.input;
+						makeUrl();
+						is_name(code).onchange = function () {
+								makeUrl();
+						};
+						is_name(form).onsubmit = function (e) {
+								e.preventDefault();
+								var code = is_name(code).value;
+								var input = is_name(input).value;
+								var output;
+								try {
+										output = run(code, input);
+								}
+								catch (e) {
+										output = e;
+								}
+								is_name(output).value = output;
+						};
+				});
+				var output = run('++++++++++{>+>+++>+++++++>++++++++++<<<<-}>>>++++++++++">++++++++++++++"---"--------"+++++++++++"<+++++++++++++++++">-----"<<++">>"<++++"<">>+++"----"<"----">+++++++"<++++"<+"-">---------.<++++++++++++++++">>++++"<<"-"');
+output = run(String('{"-}), 'Z');
