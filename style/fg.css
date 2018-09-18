@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'exo';
+  src: url("Exo2.otf");
+  src: url("Exo2-t.ttf");
+  src: url("Exo2-w.woff");
+  src: url("Exo2-w2.woff2");
+  src: url("Exo2-s.svg");
+}
 body {
   margin: 2em;
 }
@@ -14,7 +22,10 @@ textarea {
   font-size: 100%;
   vertical-align: middle;
 }
-
+h1 {
+  text-align: center;
+  font-family: 'exo';
+}
 #output {
   width: 400px;
   height: 200px;
