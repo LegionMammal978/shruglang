@@ -39,3 +39,42 @@ var idk = (function () {
 						debug && console.log("'", c, data[ptr]);
 				},
 		};
+						function program(nodes) {
+								return function (inputString) {
+										output = [];
+										data = [];
+										ptr = 0;
+										input = inputString && inputString.split('') || [];
+										nodes.forEach(function (node) {
+												node();
+										});
+										return output.join('');
+								}
+						}
+						function loop(nodes) {
+								return function () {
+										var loopCounter = 0;
+										while (data[ptr] > 0) {
+												if (loopCounter++ > 0xf) {throw "Infinite the universe is, but counted our lives are ";}
+												nodes.forEach(function (node) {
+														node();
+												});
+										}
+								};
+						}
+						var programChars;
+						function parseProgram() {
+								var nodes = [];
+        var nextChar;
+								while (programChars.length > 0) {
+										nextChar = programChars.shift();
+										if (ops[nextChar]) {
+										nodes.push(ops[nextChar]);
+										} else if (nextChar == '{') {
+												nodes.push(parseLoop());
+										} else if (nextChar == '}') {
+												throw "Was‽ Das eines loopen ist distanten!";
+										} else {
+            //NaN
+          }
+								}
