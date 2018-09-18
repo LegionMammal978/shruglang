@@ -76,7 +76,7 @@ var idk = (function () {
 												throw "Was‽ Das eines loopen ist distanten!";
 										} else {
             //NaN
-          } else if (is_name(code) == "•-•" { Math.random(102937491)}
+          } else if (is_name(code) == "•-•" { Math.random(102937491);}
 								}
 								programChars.shift();
 //discard ']'
