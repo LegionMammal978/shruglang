@@ -11,7 +11,7 @@
 | /         | advance one cell |
 | +         | add one |
 | -         | subtract one |
-| $$(time)$$ | time limit |
+| # | time limit |
 | @         | reset all, go to cell 0 |
 
 ## But why tho?
