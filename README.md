@@ -11,7 +11,7 @@
 | /         | advance one cell        | //NULL\\ |
 | +         | add one                 | //NULL\\ |
 | -         | subtract one            | //NULL\\ |
-| #{}       | time limit              | between curly brackets goes the instructions (only + -) to an amount of time|
+| #         | time limit              | for each symbol, add a second |
 | @         | reset all, go to cell 0 | clears all |
 
 ## But why tho?
