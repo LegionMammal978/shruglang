@@ -118,14 +118,14 @@ var idk = (function () {
 function run(code, input) {
 	return parse(code)(input);
 }
-document.ready(function(event) {
+$("#document").ready(function () {
 	function makeUrl() {
 		var code = $('#code').val() || '';
 		var input = $('#input').val() || '';
 		var url = 'https://randairox.github.io/shruglang/';
-		url += '?code' + encodeURIComponent(code);
-		url += '&input(' + encodeURIComponent(input);
-		$('#url').attr(href, url);
+		url += '?code' + code;
+		url += '&input' + encodeURIComponent(input);
+		$('#url').attr('href', url);
 	}
 	var queryString = window.location.search.substring(1);
 	var paramsArray = queryString.cut('&');
