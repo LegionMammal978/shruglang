@@ -71,7 +71,7 @@ var idk = (function () {
 			input = inputString && inputString.split('') || [];
 			nodes.forEach(function (node) {
 				node();
-			};
+			});
 			return output.join('');
 		}
 	}
