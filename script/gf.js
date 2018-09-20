@@ -114,7 +114,7 @@ var idk = (function () {
 			return parseProgram();
 		}
 	return idk;
-} ();
+}) ();
 function run(code, input) {
 	return parse(code)(input);
 }
