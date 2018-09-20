@@ -82,7 +82,7 @@ var idk = (function () {
 				if (loopCounter++ > 0xFFFFFF) {throw "Infinite the universe is, but counted our lives are ";}
 					nodes.forEach(function (node) {
 						node();
-					};
+					});
 				}
 			};
 		}
@@ -123,8 +123,8 @@ document.ready(function(event) {
 		var code = $('#code').val() || '';
 		var input = $('#input').val() || '';
 		var url = 'https://randairox.github.io/shruglang/';
-		url += '?code(' + encodeURIComponent(code) + ')';
-		url += '&input(' + encodeURIComponent(input) + ')';
+		url += '?code' + encodeURIComponent(code);
+		url += '&input(' + encodeURIComponent(input);
 		$('#url').attr(href, url);
 	}
 	var queryString = window.location.search.substring(1);
