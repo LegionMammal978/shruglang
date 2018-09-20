@@ -6,7 +6,7 @@
 | }         | endif                   | //NULL\\ |
 | '         | input                   | //NULL\\ |
 | "         | print                   | ASCII (i hate that system, mostly the restricted amount of characters pArt) |
-| •-•       | random default          | random non-databased video |
+| •-•       | random default          | random stuff |
 | \         | retreat one cell        | //NULL\\ |
 | /         | advance one cell        | //NULL\\ |
 | +         | add one                 | //NULL\\ |
