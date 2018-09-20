@@ -4,6 +4,7 @@
 |    ---    |         ---             |    ---   |
 | {         | as long as              | //NULL\\ |
 | }         | endif                   | //NULL\\ |
+| _         | input                   | //NULL\\ |
 | '         | input                   | //NULL\\ |
 | "         | print                   | ASCII (i hate that system, mostly the restricted amount of characters pArt) |
 | •-•       | random default          | random stuff |
