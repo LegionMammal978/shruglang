@@ -140,7 +140,7 @@ $("#document").ready(function () {
 	$('#code').onchange = function () {
 		makeUrl();
 	};
-	$('#form').onsubmit = function (e) {
+	$('form').onsubmit = function (e) {
 		e.preventDefault();
 		var code = $('#code').val();
 		var input = $('#input').val();
