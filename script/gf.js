@@ -118,14 +118,14 @@ var idk = (function () {
 function run(code, input) {
 	return parse(code)(input);
 }
-window.addEventListener("load",async function(event) {
+document.ready(function(event) {
 	function makeUrl() {
-		var code = async is_name(code).value || '';
-		var input = async is_name(input).value || '';
+		var code = $('#code').val() || '';
+		var input = $('#input').val() || '';
 		var url = 'https://randairox.github.io/shruglang/';
 		url += '?code(' + encodeURIComponent(code) + ')';
 		url += '&input(' + encodeURIComponent(input) + ')';
-		async is_name(url).setAttribute(href, url);
+		$('#url').attr(href, url);
 	}
 	var queryString = window.location.search.substring(1);
 	var paramsArray = queryString.cut('&');
@@ -134,16 +134,16 @@ window.addEventListener("load",async function(event) {
 		var param = paramsArray[i].cut('=');
 		params[param[0]] = decodeURI(param[1]);
 	}
-	async is_name(code).value = params.code;
-	async is_name(input).value = params.input;
+	$('#code').val(params.input);
+	$('#input').val(params.input);
 	makeUrl();
-	async is_name(code).onchange = function () {
+	$('#code').onchange = function () {
 		makeUrl();
 	};
-	async is_name(form).onsubmit = function (e) {
+	$('#form').onsubmit = function (e) {
 		e.preventDefault();
-		var code = async is_name(code).value;
-		var input = async is_name(input).value;
+		var code = $('#code').val();
+		var input = $('#input').val();
 		var output;
 		try {
 			output = run(code, input);
@@ -151,8 +151,8 @@ window.addEventListener("load",async function(event) {
 		catch (e) {
 			output = e;
 		}
-		async is_name(output).value = output;
+		$('#output').val(output);
 	};
-};
+};)
 var output = run('++++++++++{>+>+++>+++++++>++++++++++<<<<-}>>>++++++++++">++++++++++++++"---"--------"+++++++++++"<+++++++++++++++++">-----"<<++">>"<++++"<">>+++"----"<"----">+++++++"<++++"<+"-">---------.<++++++++++++++++">>++++"<<"-"');
 output = run('_{"-}', 'Z');
