@@ -3,15 +3,16 @@ var parse = (function () {
 	var output;
 	var data;
 	var ptr;
-	var ctrn;
 	var debug = false;
 	var ops = {
 		'#': function() {
+			var ctrn = 0;
 			for (nextChar == '#') {
 				ctrn += 1000;
 			}
 			if (nextChar != '#') {
-				setTimeout(ctrn, ptr++);
+				setTimeout(ctrn, parseProgram());
+				ctrn = 0;
 			}
 		}
 		'@': function() {
