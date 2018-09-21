@@ -41,7 +41,7 @@ var parse = (function () {
 
 
 
-    '<': function () {
+    '\': function () {
 
       ptr--;
 
@@ -58,7 +58,7 @@ var parse = (function () {
 
 
 
-    '>': function () {
+    '/': function () {
 
       ptr++;
 
