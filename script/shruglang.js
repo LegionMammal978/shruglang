@@ -228,7 +228,7 @@ var parse = (function () {
 
       } else if (nextChar == '}') {
 
-        throw "Missing opening bracket";
+        throw "Was‽ Das loopen head ist missing!";
 
       } else {
 
@@ -416,10 +416,10 @@ $(document).ready(function () {
 
 
 
-var output = run('++++++++++{>+++++++>++++++++++>+++>+<<<<-}>++">+"+++++++""+++">++"<<+++++++++++++++">"+++"------"--------">+">"');
+var output = run('++++++++++{/+++++++/++++++++++/+++/+\\\\-}>++"\+"+++++++""+++"/++"\\+++++++++++++++"/"+++"------"--------"/+"/"');
 
 console.log(output);
 
-output = run('_{"-}", 'Z');
+output = run('_{"-}', 'Z');
 
 console.log(output);
