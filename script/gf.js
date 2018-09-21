@@ -1,4 +1,4 @@
-var idk = (function () {
+var parse = (function () {
 	var input;
 	var output;
 	var data;
@@ -79,7 +79,7 @@ var idk = (function () {
 		return function () {
 			var loopCounter = 0;
 			while (data[ptr] > 0) {
-				if (loopCounter++ > 0xFFFFFF) {throw "Infinite the universe is, but counted our lives are ";}
+				if (loopCounter++ > 9007199254740990) {throw "Infinite the universe is, but counted our lives are ";}
 					nodes.forEach(function (node) {
 						node();
 					});
@@ -97,23 +97,20 @@ var idk = (function () {
 				} else if (nextChar == '{') {
 					nodes.push(parseLoop());
 				} else if (nextChar == '}') {
-					throw "Was‽ Das eines loopen ist distanten!";										} else if (is_name(code) == "•-•") {
-            				Math.random(1000);
-          			} else {
+					throw "Was‽ Das eines loopen ist distanten!";
+          		} else {
 					//NaN
 				}
 			}
+			
 			programChars.shift();
-
-			//discard '}'
-
 			return loop(nodes);
 		}
 		function parse(str) {
 			programChars = str.split('');
 			return parseProgram();
 		}
-	return idk;
+	return parse;
 }) ();
 function run(code, input) {
 	return parse(code)(input);
@@ -124,7 +121,7 @@ $("#document").ready(function () {
 		var input = $('#input').val() || '';
 		var url = 'https://randairox.github.io/shruglang/';
 		url += '?code' + code;
-		url += '&input' + encodeURIComponent(input);
+		url += '&ainput' + encodeURIComponent(input);
 		$('#url').attr('href', url);
 	}
 	var queryString = window.location.search.substring(1);
@@ -137,10 +134,10 @@ $("#document").ready(function () {
 	$('#code').val(params.input);
 	$('#input').val(params.input);
 	makeUrl();
-	$('#code').onchange = function () {
+	$('#code, #input').change = function () {
 		makeUrl();
 	};
-	$('form').onsubmit = function (e) {
+	$('form').submit = function (e) {
 		e.preventDefault();
 		var code = $('#code').val();
 		var input = $('#input').val();
@@ -151,8 +148,10 @@ $("#document").ready(function () {
 		catch (e) {
 			output = e;
 		}
-		$('#output').val(output);
+		$('#output').text(output);
 	};
 };)
 var output = run('++++++++++{>+>+++>+++++++>++++++++++<<<<-}>>>++++++++++">++++++++++++++"---"--------"+++++++++++"<+++++++++++++++++">-----"<<++">>"<++++"<">>+++"----"<"----">+++++++"<++++"<+"-">---------.<++++++++++++++++">>++++"<<"-"');
+console.log(output);
 output = run('_{"-}', 'Z');
+console.log(output);
