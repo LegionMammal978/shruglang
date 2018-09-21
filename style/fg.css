@@ -1,10 +1,18 @@
 @font-face {
   font-family: 'exo';
-  src: url("Exo2.otf");
-  src: url("Exo2-t.ttf");
-  src: url("Exo2-w.woff");
-  src: url("Exo2-w2.woff2");
-  src: url("Exo2-s.svg");
+  src: url("exo2/Exo2.otf");
+  src: url("exo2/Exo2-t.ttf");
+  src: url("exo2/Exo2-w.woff");
+  src: url("exo2/Exo2-w2.woff2");
+  src: url("exo2/Exo2-s.svg");
+}
+@font-face {
+  font-family: 'anonPro';
+  src: url("anonpro/AnonPro-t.ttf");
+  src: url("anonpro/AnonPro-o.otf");
+  src: url("anonpro/AnonPro-s.svg");
+  src: url("anonpro/AnonPro-w.woff");
+  src: url("anonpro/AnonPro-w2.woff2");
 }
 body {
   margin: 2em;
