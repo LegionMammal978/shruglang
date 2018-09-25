@@ -29,7 +29,7 @@ var ops = {
 		debug && console.log('\\', ptr);
 	},
 
-	'\/': function ()
+	'/': function ()
 	{
 		ptr++;
 		debug && console.log('\/', ptr);
