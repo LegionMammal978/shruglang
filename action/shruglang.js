@@ -238,7 +238,7 @@ $(document).ready(function ()
 		makeUrl();
 	});
 
-	$('form').submit(function (e)
+	$('#parser').submit(function (e)
 	{
 		e.preventDefault();
 		var code = $('#code').val();
@@ -256,7 +256,11 @@ $(document).ready(function ()
 	});
 });
 
+function inIt() {
 var output = run('++++++++++{\/+++++++\/++++++++++\\+++\/+\\\\\\\\-}/++\"\/+.+++++++\"\"+++\"\/++\"\\\\+++++++++++++++\"\/\"+++\"------\"--------\"\/+\"\/\"');
 console.log(output);
-output = run('_{\"-}', 'Z');
-console.log(output);
+$("#output").text() = output;
+	setTimeout(5000, (function () {
+		$("$output").text() = NaN;
+	}
+}
