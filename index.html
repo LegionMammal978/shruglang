@@ -1,40 +1,33 @@
-
-<html><head>
+<!doctype html>
+<html>
+	<head>
     <title>¯\_(ツ)_/¯</title>
     <link href="style/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="style/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <h1>¯\_(ツ)_/¯</h1>
-    <form>
-      <table>
-        <tbody><tr>
-          <td><p><label for="code">Code</label></p></td>
-          <td><input name="code" id="code"></td>
-        </tr>
-        <tr>
-          <td><label for="input">Input</label></td>
-          <td><input name="input" id="input"></td>
-        </tr>
-      </tbody></table>
-      <p>
+    <form async="">
+			<label for="code">Code</label>
+         <input name="code" id="code" />
+          <label for="input">Input</label>
+          <input name="input" id="input" />
       <input type="submit" value="Run">
-      </p>
     </form>
 
-    <p id="output"></p>
+    <p async="" id="output"></p>
 
-    <p><a id="url" href="http://randairox.github.io/shruglang/?code=&input=">This code and input as a URL</a></p>
+    <p><a async="" id="url" href="http://randairox.github.io/shruglang/?code=&input=">This code and input as a URL</a></p>
 
-	 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123363810-2"></script>
+	 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123363810-2"></script><script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-123363810-2');
     </script>
-	 <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="action/bootstrap.min.js"></script>
-    <script src="action/brainfuck.js"></script>
+    <script async="" src="action/bootstrap.min.js"></script>
+    <script async="" src="action/brainfuck.js"></script>
 
-</body></html>
+</body>
+</html>
