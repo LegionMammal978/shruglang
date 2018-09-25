@@ -1,33 +1,33 @@
 <!doctype html>
 <html>
 	<head>
-    <title>¯\_(ツ)_/¯</title>
-    <link href="style/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="style/style.css" rel="stylesheet" media="screen">
-  </head>
-  <body onload="inIt()">
-    <h1>¯\_(ツ)_/¯</h1>
-    <form id="parser">
+		<title>¯\_(ツ)_/¯</title>
+		<link href="style/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="style/style.css" rel="stylesheet" media="screen">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="raw.githubusercontent.com/randairox/JALOJ/master/api_Up.js"></script>
+	</head>
+	<body onload="inIt()">
+		<h1>¯\_(ツ)_/¯</h1>
+		<form id="parser">
 			<label for="code">Code</label>
-         <input name="code" id="code" />
-          <label for="input">Input</label>
-          <input name="input" id="input" />
-      <input type="submit" value="Run">
-    </form>
-
-    <p id="output"></p>
-
-    <p><a id="url" href="http://randairox.github.io/shruglang/?code=&input=">This code and input as a URL</a></p>
-
-	 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123363810-2"></script><script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-123363810-2');
-    </script>
-    <script src="action/bootstrap.min.js"></script>
-    <script src="action/brainfuck.js"></script>
-
-</body>
+			<input name="code" id="code" />
+			<label for="input">Input</label>
+			<input name="input" id="input" />
+			<input type="submit" value="Run" />
+		</form>
+		<p id="output"></p>
+		
+		<p><a id="url" href="http://randairox.github.io/shruglang/?code=&input=">This session as a link</a></p>
+		
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123363810-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-123363810-2');
+		</script>
+		<script src="action/bootstrap.min.js"></script>
+		<script src="action/brainfuck.js"></script>
+	</body>
 </html>
