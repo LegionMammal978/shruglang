@@ -236,28 +236,23 @@ $(document).ready(function ()
 	$('#input').val(params.input);
 	makeUrl();
 
-
-	$('#code, #input').change(function ()
-	{
-		makeUrl();
-	});
-
-	$('#parser').submit(function (e)
-	{
-		e.preventDefault();
+});
+$(function() {
+    $(".button").click(function() {
+      e.preventDefault();
 		var code = $('#code').val();
 		var input = $('#input').val();
 		var output;
 		try
 		{
 			output = run(code, input);
+			makeUrl();
 		}
 		catch (e)
 		{
 			output = e;
 		}
-		$('#output').text(output);
-	});
+    });
 });
 
 function inIt() {
