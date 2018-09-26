@@ -19,7 +19,7 @@ var ops = {
 		debug && console.log('-', data[ptr], ptr);
 	},
 
-	'\\': function ()
+	'\': function ()
 	{
 		ptr--;
 		if (ptr < 0)
@@ -35,7 +35,7 @@ var ops = {
 		debug && console.log('\/', ptr);
 	},
 
-	'\"': function ()
+	'$': function ()
 	{
 		var c = String.fromCharCode(data[ptr]);
 		output.push(c);
@@ -254,12 +254,3 @@ $(function() {
 		}
     });
 });
-
-function inIt() {
-var output = run('++++++++++{\/+++++++\/++++++++++\\+++\/+\\\\\\\\-}/++\"\/+.+++++++\"\"+++\"\/++\"\\\\+++++++++++++++\"\/\"+++\"------\"--------\"\/+\"\/\"');
-console.log(output);
-$("#output").text() = output;
-	setTimeout(5000, (function () {
-		$("$output").text() = NaN;
-	}
-}
