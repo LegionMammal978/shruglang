@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'exo';
+  font-family: "exo2";
   src: url("exo2/Exo2.otf");
   src: url("exo2/Exo2-t.ttf");
   src: url("exo2/Exo2-w.woff");
@@ -7,7 +7,7 @@
   src: url("exo2/Exo2-s.svg");
 }
 @font-face {
-  font-family: 'anonPro';
+  font-family: "anonPro";
   src: url("anonpro/AnonPro-t.ttf");
   src: url("anonpro/AnonPro-o.otf");
   src: url("anonpro/AnonPro-s.svg");
@@ -32,13 +32,24 @@ textarea {
 }
 h1 {
   text-align: center;
-  font-family: 'exo';
+  font-family: "anonPro";
 }
 #output {
-  font-family: 'anonPro';
+  font-family: "anonPro";
   width: 400px;
   height: 200px;
   padding: 5px;
   border: 1px solid gray;
   margin-top: 1em;
+}
+footer {
+  font-family: "exo2";
+  font-height: 50px;
+  font-width: 50px;
+  text-align: center;
+  bottom: 0;
+}
+img {
+  height: 50px;
+  width: 50px;
 }

@@ -211,16 +211,14 @@ function run(code, input)
 }
 
 
-$(document).ready(function ()
+function makeUrl()
 {
-	function makeUrl()
-	{
-		var code = $('#code').val() || '';
-		var input = $('#input').val() || '';
-		var url = 'http://randairox.github.io/shruglang/';
+	var code = document.getElementById('code').value || '';
+	var input = document.getElementById('input').value || '';
+	var url = 'https://randairox.github.io/shruglang/';
 		url += '?code=' + code;
 		url += '&input=' + encodeURIComponent(input);
-		$('#url').attr('href', url);
+		document.getElementById('url').setAttribute('href', url);
 	}
 
 	var queryString = window.location.search.substring(1);
@@ -232,25 +230,23 @@ $(document).ready(function ()
 		params[param[0]] = decodeURI(param[1]);
 	}
 
-	$('#code').val(params.code);
-	$('#input').val(params.input);
+	document.getElementById('code').value = params.code;
+	document.getElementById('input').value = params.input;
 	makeUrl();
 
 });
-$(function() {
-    $(".button").click(function() {
-      e.preventDefault();
-		var code = $('#code').val();
-		var input = $('#input').val();
-		var output;
-		try
-		{
-			output = run(code, input);
-			makeUrl();
-		}
-		catch (e)
-		{
-			output = e;
-		}
-    });
+    document.getElementsByClassName("button").addEventListener("click",function(){
+   e.preventDefault();
+   var code = $('#code').val();
+	var input = $('#input').val();
+	var output;
+	try
+	{
+		output = run(code, input);
+		makeUrl();
+	}
+	catch (e)
+	{
+		output = e;
+	}
 });
