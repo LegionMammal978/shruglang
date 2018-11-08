@@ -237,8 +237,8 @@ function makeUrl()
 });
     document.getElementsByClassName("button").addEventListener("click",function(){
    e.preventDefault();
-   var code = $('#code').val();
-	var input = $('#input').val();
+   var code = document.getElementById('code').value;
+	var input = document.getElementById('input').valur;
 	var output;
 	try
 	{
