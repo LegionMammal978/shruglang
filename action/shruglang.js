@@ -235,7 +235,7 @@ function makeUrl()
 	makeUrl();
 
 });
-    document.getElementsById("mmmmmmrrr").addEventListener("click",function(){
+    document.getElementById("mmmmmmrrr").addEventListener("click",function(){
    e.preventDefault();
    var code = document.getElementById('code').value;
 	var input = document.getElementById('input').value;
