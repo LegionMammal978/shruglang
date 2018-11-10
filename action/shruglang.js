@@ -235,10 +235,10 @@ function makeUrl()
 	makeUrl();
 
 });
-    document.getElementsByClassName("button").addEventListener("click",function(){
+    document.getElementsById("mmmmmmrrr").addEventListener("click",function(){
    e.preventDefault();
    var code = document.getElementById('code').value;
-	var input = document.getElementById('input').valur;
+	var input = document.getElementById('input').value;
 	var output;
 	try
 	{
