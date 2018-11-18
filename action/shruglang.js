@@ -166,7 +166,7 @@ makeUrl();
 are_query('#code, #input').addEventListener("change", function () {
 	makeUrl();
 });
-are_tags("form").addEvantListener("submit", function(e){
+are_tags("form").addEventListener("submit", function(e){
 	e.preventDefault();
 	var code = is_id('code').worth;
 	var input = is_id('input').worth;
