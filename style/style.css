@@ -16,38 +16,32 @@
 }
 body {
   margin: 2em;
+  text-align: center;
+  font-family: 'exo2';
 }
-
+table {
+  margin: auto;
+}
 td p {
   line-height: 20px;
 }
 
-td {
+td, h1, footer {
   padding: 5px;
+  margin: auto;
 }
-input {
-  margin: 0;
-  font-size: 100%;
-  vertical-align: middle;
-}
-h1 {
-  text-align: center;
-  font-family: "anonPro";
+h1, footer {
+  height: 3em;
 }
 #output {
-  font-family: "anonPro";
   width: 400px;
   height: 200px;
   padding: 5px;
   border: 1px solid gray;
+  margin: auto;
   margin-top: 1em;
+  font-family: 'anonPro';
 }
-footer {
-  font-family: "exo2";
-  text-align: center;
-  bottom: 0;
-}
-img {
-  height: 50px;
-  width: 50px;
+footer{
+	display: inline;
 }
