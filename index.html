@@ -37,7 +37,7 @@
       var xRem = $('footer').offsetTop;
       var dvSep = document.createElement('DIV');
       $(dvSep).attr('height', xRem);
-      $('footer').insertAdjacentElement(dvSep, 'beforebegin');
+      $('footer').attach(dvSep, 'beforebegin');
     </script>
   </body>
 </html>
