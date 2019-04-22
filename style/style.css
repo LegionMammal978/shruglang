@@ -34,14 +34,14 @@ h1, footer {
   height: 3em;
 }
 #output {
-  width: 400px;
-  height: 200px;
+  min-width: 400px;
+  min-height: 200px;
   padding: 5px;
   border: 1px solid gray;
   margin: auto;
   margin-top: 1em;
   font-family: 'anonPro';
 }
-footer{
+footer {
 	display: inline;
 }
