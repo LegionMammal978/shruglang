@@ -62,10 +62,11 @@ var parse = (function () {
       } else if (luck_num <= 300 && luck_num >= 200) {
 	var conTrr = document.createElement('IMG');
 	conTrr.setAttribute('src', './style/imgs/apth.webp');
-	$('body').append(conTrr);
+	output = conTrr;
       } else if (luck_num <= 10) {
-        var igniTer = $('body').createElement("IFRAME");
+        var igniTer = document.createElement("IFRAME");
 	igniTer.attrib('src', 'http://ondras.zarovi.cz/demos/rubik/index.html');
+	output = igniTer;
       } else {
 	      //I have no idea
         ll = true;
@@ -199,7 +200,11 @@ $(document).ready(function () {
       output = e;
       throw e;
     }
-    document.getElementById('output').innerHTML = output;
+    if (!output.innerHTML) {
+      document.getElementById('output').innerHTML = output;
+    } else {
+      $('#output').append(output);x
+    }
     console.log(output);
     if (typeof output === String && output.split(/\r?\n/).length - 1 * 16 > 400) {
       $('#output').css('height', output.split(/\r?\n/).length - 1 * 16);
