@@ -197,9 +197,10 @@ $(document).ready(function () {
     }
     catch (e) {
       output = e;
+      console.log(e);
     }
     document.getElementById('output').innerHTML = output;
-    console.log(output);
+    typeof output !== TypeError ? (()=>{}) : console.log(output);
   });
 });
 
