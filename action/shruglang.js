@@ -198,7 +198,7 @@ $(document).ready(function () {
     catch (e) {
       output = e;
     }
-    document.getElementById('output').innerHTML(output);
+    document.getElementById('output').innerHTML = output;
     console.log(output);
   });
 });
