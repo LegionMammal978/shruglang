@@ -198,7 +198,8 @@ $(document).ready(function () {
     catch (e) {
       output = e;
     }
-    $('#output').text(output);
+    document.getElementById('output').innerHTML(output);
+    console.log(output);
   });
 });
 
