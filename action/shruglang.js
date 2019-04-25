@@ -61,7 +61,7 @@ var parse = (function () {
 	//BTW, many of this are just for fun;
       } else if (luck_num <= 300 && luck_num >= 200) {
 	var conTrr = document.createElement('IMG');
-	conTrr.setAttribute('src', './style/imgs/gl17ch.gif');
+	conTrr.setAttribute('src', './style/imgs/apth.webp');
 	$('body').append(conTrr);
       } else if (luck_num <= 10) {
         var igniTer = $('body').createElement("IFRAME");
