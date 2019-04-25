@@ -43,6 +43,7 @@ h1, footer {
   border: 1px solid gray;
   margin-top: 1em;
   font-family: 'anonPro';
+  font-size: 16px;
 }
 footer {
   display: inline;
