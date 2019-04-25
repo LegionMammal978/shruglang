@@ -39,6 +39,7 @@ h1, footer {
 #output {
   min-width: 400px;
   min-height: 200px;
+  height: 100%;
   padding: 5px;
   border: 1px solid gray;
   margin-top: 1em;
