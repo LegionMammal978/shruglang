@@ -1,4 +1,4 @@
-var parse = (function () {
+var parse = (() => {
   var input;
   var output;
   var data;
@@ -74,40 +74,28 @@ var parse = (function () {
     }
   };
 
-  function program(nodes) {
-    return function (inputString) {
-      output = [];
-      data = [];
-      ptr = 0;
+  var program = (nodes) => (inputString) => {
+    output = [];
+    data = [];
+    ptr = 0;
+    input = inputString && inputString.split('') || [];
+    nodes.forEach((node) => node());
+    return Array.isArray(output) ? output.join('') : output;
+  };
 
-      input = inputString && inputString.split('') || [];
-
-      nodes.forEach(function(node){node();});
-
-      return output.join('');
-    };
-  }
-
-  function loop(nodes) {
-    return function () {
-      var loopCounter = 0;
-
-      while(data[ptr] > 0) {
-        if ((loopCounter + 1) > 10000) { throw "Infinite loop detected"; }
-
-        nodes.forEach(function(node){node();});
-      }
-    };
-  }
-
-
+  var loop = (nodes) => function(){
+    var loopCounter = 0;
+    while(data[ptr] > 0) {
+      if ((loopCounter + 1) > 10000) { throw "Infinite-or-excessively_long loop detected"; }
+      nodes.forEach((node) => node());
+    }
+  };
 
   var programChars;
 
-  function parseProgram() {
+  var parseProgram = () => {
     var nodes = [];
     var nextChar;
-
     while (programChars.length > 0) {
       nextChar = programChars.shift();
       if (ops[nextChar]) {
@@ -121,14 +109,12 @@ var parse = (function () {
         ll = true;
       }
     }
-
     return program(nodes);
-  }
+  };
 
-  function parseLoop() {
+  var parseLoop = () => {
     var nodes = [];
     var nextChar;
-
     while (programChars[0] != '}') {
       nextChar = programChars.shift();
       if (nextChar == undefined) {
@@ -143,22 +129,17 @@ ll = true;
       }
     }
     programChars.shift(); //discard '}'
-
     return loop(nodes);
   }
-
-  function parse(str) {
+  
+  return (str) => {
     programChars = str.split('');
     return parseProgram();
-  }
-
-  return parse;
+  };
 })();
 
 
-function run(code, input) {
-  return parse(code)(input);
-}
+var run = (code, input) => parse(code)(input);
 
 
 $(document).ready(function () {
@@ -184,9 +165,7 @@ $(document).ready(function () {
   makeUrl();
 
 
-  $('#code, #input').change(function () {
-    makeUrl();
-  });
+  $('#code, #input').change(() => makeUrl());
 
   $('form').submit(function (e) {
     e.preventDefault();
@@ -203,16 +182,11 @@ $(document).ready(function () {
     if (!output.innerHTML) {
       document.getElementById('output').innerHTML = output;
     } else {
-      $('#output').append(output);x
+      $('#output').append(output);
     }
     console.log(output);
-    if (typeof output === String && output.split(/\r?\n/).length - 1 * 16 > 400) {
-      $('#output').css('height', output.split(/\r?\n/).length - 1 * 16);
-    }
   });
 });
 
-var output = run('++++++++++{\/+++++++\/++++++++++\/+++\/+\\\\\\\\-}\/++$\/+$+++++++$$+++$\/++$\\\\+++++++++++++++$\/$+++$------$--------$\/+$\/$');
-console.log(output);
-output = run('_{$-}', 'Z');
+var output = run('++++++++++{/+/+++/+++++++/++++++++++\\\\-}////+++++++++++++++++++$---------------$+++++++++++++++++$\\++$//---------------------$+++++++++++$-$\\+++++++$//++++++$\\-------$//+++++$----------$++++++$\\$//---------$+++$$----$\\$//----------$+++++++++++++++++$---$++++++$-------$----------$\\$//+++++$---$\\$//+++++++++++++++++++$----------$++++++$\\$//--------$------------$+++++++++++++$-------------$++++++$--$-$\\$//++++++++++++++++$-----$\\$//--------$--$+++++++++++++++$\\$//------------$---$+++++++++++++$-------------$\-------$');
 console.log(output);
