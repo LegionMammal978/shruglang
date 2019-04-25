@@ -202,6 +202,9 @@ $(document).ready(function () {
     }
     document.getElementById('output').innerHTML = output;
     console.log(output);
+    if (typeof output === String && output.split(/\r?\n/).length - 1 * 16 > 400) {
+      $('#output').css('height', output.split(/\r?\n/).length - 1 * 16);
+    }
   });
 });
 
