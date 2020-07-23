@@ -130,7 +130,7 @@ ll = true;
     }
     programChars.shift(); //discard '}'
     return loop(nodes);
-  }
+  };
   
   return (str) => {
     programChars = str.split('');
