@@ -1,4 +1,4 @@
-#Open Software Licence
+# Open Software Licence
 The piece of software hereby licensed is subject to no terms. External parties,
 should they choose to do so, are encouraged to fork, copy, or otherwise freely
 use it.
